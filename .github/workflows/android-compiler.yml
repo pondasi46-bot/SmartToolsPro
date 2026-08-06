@@ -1,0 +1,46 @@
+name: Production Android Compiler (.aab)
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  compile-project:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 1. Clone Clean Repository Source
+      uses: actions/checkout@v4
+
+    - name: 2. Deploy Node.js Environment
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18
+
+    - name: 3. Initialize Java 17 Engine
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'zulu'
+        java-version: '17'
+
+    - name: 4. Configure Modern Android SDK Tools
+      uses: android-actions/setup-android@v3
+
+    - name: 5. Deploy Global Apache Cordova Compiler
+      run: npm install -g cordova
+
+    - name: 6. Restore Platform and Premium Plugins
+      run: |
+        npm init -y
+        cordova platform add android --save
+        cordova plugin add cordova-plugin-camera --save
+        cordova plugin add admob-plus-cordova --save
+
+    - name: 7. Compile High-End Production Android App Bundle (.aab)
+      run: cordova build android --release -- --buildType=bundle
+
+    - name: 8. Archive and Export Safe Production Artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: DocScanPro-Tier1-Build
+        path: platforms/android/app/build/outputs/bundle/release/app-release.aab

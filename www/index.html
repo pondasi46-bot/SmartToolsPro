@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: blob: cdvphotolocal:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.google.com https://*.googlesyndication.com;">
+    <title>DocScan Pro</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="app-card">
+        <header>
+            <h1>DocScan Pro 📄</h1>
+            <p class="subtitle">Premium Document Utility (US/UK/EU High-Floor Edition)</p>
+        </header>
+        <div class="viewport">
+            <img id="viewImage" src="" alt="Document Preview" style="display:none;" />
+            <canvas id="canvasProcessor" style="display:none;"></canvas>
+            <div id="statusLoad">📷 Camera Engine Ready</div>
+        </div>
+        <div class="filter-bar">
+            <button id="btnOriginal" class="filter-btn" disabled>Original</button>
+            <button id="btnMagic" class="filter-btn" disabled>Magic Color</button>
+            <button id="btnBW" class="filter-btn" disabled>B&W Docs</button>
+        </div>
+        <div class="action-bar">
+            <button id="btnTriggerCamera" class="btn btn-blue">📷 Capture Document</button>
+            <button id="btnFinalize" class="btn btn-green" disabled>💾 Save PDF & Show Ad</button>
+        </div>
+    </div>
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

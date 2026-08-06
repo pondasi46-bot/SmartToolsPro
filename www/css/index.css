@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box; margin: 0; padding: 0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    transform: translate3d(0,0,0); /* Memaksa Akselerasi Perangkat Keras GPU untuk layar ultra-fluid 120Hz */
+}
+body {
+    background-color: #0c0c0e; color: #e4e4e7;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px;
+}
+.app-card { width: 100%; max-width: 420px; background-color: #16161a; border: 1px solid #24242b; border-radius: 24px; padding: 28px; box-shadow: 0 12px 40px rgba(0,0,0,0.5); }
+.subtitle { font-size: 11px; color: #3b82f6; margin: 4px 0 24px 0; text-transform: uppercase; letter-spacing: 0.5px; }
+.viewport { width: 100%; height: 320px; background-color: #1f1f24; border: 2px dashed #3f3f46; border-radius: 16px; display: flex; justify-content: center; align-items: center; overflow: hidden; margin-bottom: 24px; position: relative; }
+#viewImage { width: 100%; height: 100%; object-fit: contain; }
+#statusLoad { text-align: center; color: #a1a1aa; font-weight: 500; }
+.filter-bar { display: flex; gap: 8px; margin-bottom: 20px; }
+.filter-btn { flex: 1; padding: 10px; background-color: #27272a; border: 1px solid #3f3f46; color: #e4e4e7; border-radius: 8px; font-weight: 600; cursor: pointer; }
+.filter-btn.active { background-color: #2563eb; border-color: #3b82f6; color: #ffffff; }
+.filter-btn:active:not(:disabled) { background-color: #3f3f46; }
+.action-bar { display: flex; flex-direction: column; gap: 12px; }
+.btn { width: 100%; padding: 16px; font-size: 16px; font-weight: 600; border: none; border-radius: 12px; cursor: pointer; }
+.btn-blue { background-color: #2563eb; color: #ffffff; }
+.btn-green { background-color: #10b981; color: #ffffff; }
+.btn:disabled, .filter-btn:disabled { background-color: #1c1c1f; border-color: #242427; color: #52525b; cursor: not-allowed; }
