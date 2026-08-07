@@ -10,10 +10,10 @@ jobs:
 
     steps:
     - name: 1. Clone Clean Repository Source
-      uses: actions/checkout@v4.2.2
+      uses: actions/checkout@v5
 
     - name: 2. Deploy Node.js Environment
-      uses: actions/setup-node@v4.2.0
+      uses: actions/setup-node@v6
       with:
         node-version: 24
 
