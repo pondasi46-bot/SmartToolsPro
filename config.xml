@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.docscanpro.premiumutility.us" version="1.0.0" xmlns="http://w3.org" xmlns:cdv="http://apache.org">
+    <name>DocScan Pro</name>
+    <description>Premium Document Utility High-Floor Edition</description>
+    <author email="premium@docscanpro.com" href="https://github.io">DocScan Pro Team</author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <preference name="LogLevel" value="DEBUG" />
+    <preference name="AndroidXEnabled" value="true" />
+    <preference name="GradleVersion" value="8.0" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+        <preference name="android-minSdkVersion" value="24" />
+        <preference name="android-targetSdkVersion" value="34" />
+    </platform>
+</widget>
