@@ -9,7 +9,6 @@
     <allow-intent href="https://*/*" />
     <preference name="LogLevel" value="DEBUG" />
     <preference name="AndroidXEnabled" value="true" />
-    <preference name="GradleVersion" value="8.0" />
     <platform name="android">
         <allow-intent href="market:*" />
         <preference name="android-minSdkVersion" value="24" />
