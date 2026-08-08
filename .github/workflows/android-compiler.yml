@@ -9,15 +9,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: 1. Clone Clean Repository Source
+    - name: 1. Clone Clean Repository Source (v5)
       uses: actions/checkout@v5
 
-    - name: 2. Deploy Node.js Environment
+    - name: 2. Deploy Node.js Environment (v6)
       uses: actions/setup-node@v6
       with:
         node-version: 24
 
-    - name: 3. Initialize Java 17 Engine
+    - name: 3. Initialize Java 17 Engine (v5)
       uses: actions/setup-java@v5
       with:
         distribution: 'zulu'
@@ -39,8 +39,8 @@ jobs:
     - name: 7. Compile High-End Production Android App Bundle (.aab)
       run: cordova build android --release -- --buildType=bundle
 
-    - name: 8. Archive and Export Safe Production Artifacts
-      uses: actions/upload-artifact@v4
+    - name: 8. Archive and Export Safe Production Artifacts (Migrated to v5)
+      uses: actions/upload-artifact@v5
       with:
         name: DocScanPro-Tier1-Build
         path: platforms/android/app/build/outputs/bundle/release/app-release.aab
